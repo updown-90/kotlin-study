@@ -95,6 +95,9 @@ fun main() {
 //            filteredList.add(upperCase)
 //        }
 //    }
+
+    // 10만건 이하 데이터는 asSequensce 안쓰는게 더 나음
+    // 그 이상이라면 filter 쓸때마다 인스턴스 생성하기 때문에 asSequence 쓰면 한번만 만들어서씀
     val filteredList = upperList
         .asSequence()
         .filter { it == "A" || it == "C" }
